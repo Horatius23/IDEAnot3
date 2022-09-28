@@ -39,7 +39,7 @@ class GetNotesTest {
     }
 
     @Test
-    fun `Order notes by title ascending, correct order`() = runBlocking {
+    fun `Notlari basliklara gore artan sirala, dogru siralama`() = runBlocking {
         val notes = getNotes(NoteOrder.Title(OrderType.Ascending)).first()
 
         for(i in 0..notes.size - 2) {
@@ -48,7 +48,7 @@ class GetNotesTest {
     }
 
     @Test
-    fun `Order notes by title descending, correct order`() = runBlocking {
+    fun `Notlari basliklara gore azalan sirala, dogru siralama`() = runBlocking {
         val notes = getNotes(NoteOrder.Title(OrderType.Descending)).first()
 
         for(i in 0..notes.size - 2) {
@@ -57,7 +57,7 @@ class GetNotesTest {
     }
 
     @Test
-    fun `Order notes by date ascending, correct order`() = runBlocking {
+    fun `Notlari tarihe gore sirala, artan, dogru siralama`() = runBlocking {
         val notes = getNotes(NoteOrder.Date(OrderType.Ascending)).first()
 
         for(i in 0..notes.size - 2) {
@@ -66,7 +66,7 @@ class GetNotesTest {
     }
 
     @Test
-    fun `Order notes by date descending, correct order`() = runBlocking {
+    fun `Notlari tarihe gore sirala, azalan, dogru siralama`() = runBlocking {
         val notes = getNotes(NoteOrder.Date(OrderType.Descending)).first()
 
         for(i in 0..notes.size - 2) {
@@ -75,7 +75,7 @@ class GetNotesTest {
     }
 
     @Test
-    fun `Order notes by color ascending, correct order`() = runBlocking {
+    fun `Notlari renge gore sirala, artan, dogru siralama`() = runBlocking {
         val notes = getNotes(NoteOrder.Color(OrderType.Ascending)).first()
 
         for(i in 0..notes.size - 2) {
@@ -84,7 +84,7 @@ class GetNotesTest {
     }
 
     @Test
-    fun `Order notes by color descending, correct order`() = runBlocking {
+    fun `Notlari renge gore sirala, azalan, dogru siralama`() = runBlocking {
         val notes = getNotes(NoteOrder.Color(OrderType.Descending)).first()
 
         for(i in 0..notes.size - 2) {
